@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            margin: 0; /* Remove default margin */
+            background-image: url('./background1.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color:rgb(148, 146, 146);
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add box shadow for a subtle effect */
+        }
+
+        #nav h1 {
+            margin: 0; /* Remove default margin for h1 */
+            color: white; /* Set text color to white */
+        }
+
+        #search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #search {
+            border-radius: 15px;
+            border: 2px solid rgb(23, 23, 23);
+            padding: 11px;
+            padding-right: 28px;
+            margin-right: 10px;
+            background: url('https://cdn-icons-png.flaticon.com/512/149/149852.png') no-repeat 2% center;
+            background-size: 20px;
+           
+        }
+
+        #name {
+            display: flex;
+            flex-direction: column;
+            background-color: aquamarine;
+            margin-top: 70px; /* Adjusted margin to accommodate the fixed nav bar */
+            transition: all 0.3s ease; /* Added transition */
+        }
+
+        #profile {
+            height: 200px;
+            width: 200px;
+            border-radius: 100px;
+            margin: 10px; /* Added margin for better positioning */
+            transition: all 0.3s ease; /* Added transition */
+        }
+
+        #info {
+            margin-top: -188px;
+            margin-left: 280px; /* Adjusted margin for better alignment */
+        }
+
+        ul {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0; /* Remove default padding for the list */
+        }
+
+        li {
+            margin-bottom: 8px; /* Added margin for better spacing between list items */
+        }
+        
+        ::placeholder {
+            color: white;
+            font-size: small;
+        }
+        #sidebox{
+            
+            display: grid;
+            float: right;
+            background-color: navy;
+            color: white;
+            padding: 40px;
+            width: 250px;
+        }
+        #sidebox img{
+            width: 30px;
+            height: 30px;
+        }
+        #sidebox ::placeholder{
+            color: gray;
+        }
+        #submit{
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            padding-top: 7px;
+        }
+        /*#one{
+           
+            display: flex;
+            justify-content: space-between;
+           /* padding: 4px;
+            background-color:white;
+            position: fixed;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            z-index: 99; /* Below the navigation bar 
+        }*/
+        
+       
+        #Education img{
+            margin-left: 10px;
+            margin-top: 96px !important;
+            height: 50px;
+            width: 50px;
+        }
+      #Research{
+        
+        margin-top: -26px;
+      }
+      #Research img{
+        height: 50px;
+        margin-left: 10px;
+        width: 50px;
+      }
+      #skill{
+        margin-left: 40px;
+      }
+      #skill img{
+        height: 50px;
+        width: 50px;
+        margin-left: -27px !important;
+      }
+      #more {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+            margin-top: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        #more img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            animation: slideShow 10s infinite; /* Change the duration based on your preference */
+        }
+
+        @keyframes slideShow {
+            0%, 100% {
+                opacity: 0;
+            }
+            10%, 90% {
+                opacity: 1;
+            }
+        }
+        #more img{
+            height: 600px;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <h1>Hubspot</h1>
+        <p>Search</p>
+        <p>Resources</p>
+        <div id="search-container">
+            <input id="search" type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Search other professionals">
+        </div>
+    </div>
+    
+    <div id="name">
+        <img id="profile" style=" transition: all 0.3s ease;" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D" alt="">
+        <div id="info">
+            <h2>John Doe</h2>
+            <ul>
+                <li>Admin</li>
+                <li>Speaker</li>
+                <li>Implementation Expert</li>
+            </ul>
+        </div>
+    </div>
+    <div id="sidebox">
+        <img src="https://media.istockphoto.com/id/1022383660/photo/youve-got-mail-icon.webp?b=1&s=170667a&w=0&k=20&c=LcKiOQN51hNcoj7U_0vHcD3ZxgdABLVJafunf1CSfJQ=" alt="">
+        <h2>Sunday Snippets</h2>
+        <p>Every Sunday I write an email newsletter with some thoughts, life lessons and links to articles/books I enjoyed that week. I would love for you to join</p>
+        <input type="email" placeholder="Email address"><br>
+        <input id="submit" type="submit" value="Subscribe">
+    </div>
+    <div id="Education">
+        <img style="margin-top: 40px;" src="./education.png" alt="">
+        <h2 style="display: inline; margin-top: 40px;">Education</h2>
+        <ul style="margin-left: 40px;font-size: medium;">
+            <li>High School from YPS International School, California</li>
+            <li>Graduation from <em>Harward School of Business</em></li>
+            <li>PhD from <em>Princeton University</em>, California</li>
+            <br><br>
+        </ul>
+    </div>
+    <div id="Research">
+        <img style="margin-top: 40px;" src="./research.png" alt="">
+        <h2 style="display: inline;margin-top: 40px;">Research Areas</h2>
+        <ul style="margin-left: 40px;">
+            <li>Inbound Marketing</li>
+            <li>Sales Hub</li>
+            <li>CMS Hub</li>
+            <li>Artificial Intelligence</li>
+            <br><br>
+        </ul>
+    </div>
+    <div id="skill">
+        <img style="margin-top: 40px;" src="./skill.png" alt="">
+        <h2 style="display: inline; margin-top: 40px;">Technical Skills</h2><br>
+        <label for="C++">C++</label><br>
+        <progress id="C++" value="70" max="100">70%</progress><br>
+        <label for="Webd">Web Development</label><br>
+        <progress id="Webd" value="80" max="100">80%</progress><br>
+        <label for="python">Python</label><br>
+        <progress id="python" value="40" max="100">40%</progress><br>
+    </div>
+    <div id="more">
+        <h1>More At Hubspot</h1>
+        <br><br>
+        <img src="./img1.jpeg" alt="">
+        <img src="./img2.jpeg" alt="">
+        <img src="./img3.jpeg" alt="">
+        <img src="./img4.jpeg" alt="">
+        <img src="./img5.jpeg" alt="">
+    </div>
+    <script>
+        const images = document.querySelectorAll('#more img');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.opacity = i === index ? '1' : '0';
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        setInterval(nextImage, 3000); // Change the duration (in milliseconds) between image transitions
+    </script>
+</body>
+</html>
