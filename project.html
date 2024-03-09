@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+</head>
+<style>
+    body{
+       background-color: rgb(200, 189, 189);
+     margin: 0;
+     padding: 0;
+       overflow:scroll;
+    }
+    #nav{
+        display: flex;
+   
+    background-color: black;
+    color: wheat;
+    width: 100vw;
+    height: 10%;
+    padding: 4px;
+    justify-content: space-around;
+    margin-right: 0%;
+    }
+    li{
+        list-style-type: none;
+    }
+    .pr{
+        background-image: -webkit-linear-gradient(#FF9A8B, #FF99AC );
+    }
+   #total{
+        width: 100vw;
+        margin: auto;
+        padding: 3px;
+        margin-top: 10vh;
+        display: grid;
+       grid-template-rows:4 ;
+       grid-template-columns: 3;
+       z-index: -1;
+    }
+    .pr{
+        display: grid;
+        margin: 40px;
+        width: 300px;
+        height: 400px;
+        border-radius: 4px;
+        padding: 14px;
+    }
+    #a1{
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    #a2{
+        grid-row: 1;
+        grid-column: 2;
+    }
+
+    #a3{
+        grid-row: 1;
+        grid-column: 3;
+    }
+
+    #a4{
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    #a5{
+        grid-row: 2;
+        grid-column: 2;
+    }
+
+    #a6{
+        grid-row: 2;
+        grid-column: 3;
+    }
+
+    #a7{
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    #a8{
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    #a9{
+        grid-row: 3;
+        grid-column: 3;
+    }
+
+    #a10{
+        grid-row: 4;
+        grid-column: 1;
+    }
+
+    #a11{
+        grid-row: 4;
+        grid-column: 2;
+    }
+
+    #a12{
+        grid-row: 4;
+        grid-column: 3;
+    }
+    a{
+        text-decoration: none;
+        font-size: 30px;
+        color: black;
+        z-index: 1;
+    }
+    a:hover{
+        color: brown;
+    }
+    li > a{
+        color: wheat;
+        font-size: 14px;
+    }
+</style>
+<body>
+    <nav id="nav">
+        <li><a href="./portfolio.html">Home</a></li>
+        <li><a href="./education.html">Education</a> </li>
+        <li> <a href="./project.html">Projects</a></li>
+        <li><a href="./skill.html">Skills</a></li>
+    </nav>
+    <div id="total">
+    <div class="pr" id="a1">
+        <a href="./grade.html">Student Grade Calculator</a>
+        <p>This project deals with calculating the grade of the students provided their marks are provided in the form provided. Various conditions are applied to check whether the student is pass or fail. </p>
+    </div>
+    <div class="pr" id="a2">
+        <a href="./bmi.html">BMI Calculator</a>
+        <p>In this project, the BMI of a person is calculated when the user provides its weight in kgs and height in cms. This also tells by making the use of javascript that whether the perosn is under-weight, normal or over-weight</p>
+    </div>
+    <div class="pr" id="a3">
+        <a href="register.html">Login Slide</a>
+        <p>By making the use of css and javascript a sliding login and registeration form is created which makes the use of javascript to slide the page.Once the login page appears and when the toggle button is clicked again the registeration button appears</p>
+    </div>
+    <div class="pr" id="a4">
+        <a href="nav.html">Scroll-Nav Bar</a>
+        <p>In this project when the page is scrolled down the navigation bar appears on the top. With the use of html, css and javascript, we made the visibility hidden earlier which on scrolling gets removed.</p>
+    </div>
+    <div class="pr" id="a5">
+        <a href="./tracker.html">Task Tracker</a>
+        <p>This project keeps a track of the tasks added to the to be done list. When a particular task is completed, it is added to the completed list and removed from the "to be done" list.</p>
+    </div>
+    <div class="pr" id="a6">
+        <a href="./speed.html">Network Speed</a>
+        <p>It is used to check the network speed at a particular instant. It makes the use of javascript to calculate the number of bits transferred and hence check the speed of the internet. </p>
+    </div>
+    <div class="pr" id="a8">
+        <a href="./tip.html">Tip Calculator</a>
+        <p>While going to a restaurant in a group, it is considered good if we provide a little tip for the service of the servants or waiters. It depends on our satisfaction with the service, how much tip we want to give. This calculator calcualtes the amount of money, each one have to give as the tip.</p>
+    </div>
+    <div class="pr" id="a9">
+        <a href="./clock.html">Analog Clock</a>
+        <p>By making the use of javascript, an analog clock has been made.</p>
+    </div>
+    <div class="pr" id="a10">
+        <a href="payrole.html">Payrole Management</a>
+        <p>This project tells the amount of money of each note that has to be returned when you do not have a change and have to get some money in return. This is very useful for the shopkeepers who have to keep a lot of track of the money.</p>
+    </div>
+    <div class="pr" id="a11">
+        <a href="./mouse.html">Mouse scroll parallax</a>
+        <p>It is an animation effect which with some javascript creates a parallax effect. The images move in the direction of the mouse pointer hence creating a parallax effect.</p>
+    </div>
+    <div class="pr" id="a12">
+        <a href="./speech.html">Text to Speech Generator</a>
+        <p>By impoorting API to javascript, this converts text to speech.</p>
+    </div>
+
+    <div class="pr" id="a7">
+        <a href="./speech.html">Text to speech Generator</a>
+        <p>By impoorting API to javascript, this converts text to speech.</p>
+    </div>
+</div>
+</body>
+</html>
