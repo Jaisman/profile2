@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     #nav{
+    display: flex;
+    float: right;
+    background-color: black;
+    color: wheat;
+    width: 100vw;
+    height: 10%;
+    padding: 4px;
+    justify-content: space-around;
+    margin-right: 0%;
+  }
+  li{
+    display: inline;
+  }
+  a{
+        text-decoration: none;
+        font-size: 30px;
+        color: black;
+        z-index: 1;
+    }
+    a:hover{
+        color: brown;
+    }
+    li > a{
+        color: wheat;
+        font-size: 14px;
+    }
+  body{
+    display: flex;
+    overflow: hidden;
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  }
+  #skills{
+    display:grid;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    width: 40vw;
+    background-image: linear-gradient(45deg, #fce6e6, transparent);
+    font-size: xx-large;
+    margin-left: -145vh;
+    margin-top: 14vw;
+  }
+</style>
+<body>
+    <nav id="nav">
+      <li><a href="./portfolio.html">Home</a></li>
+      <li><a href="./education.html">Education</a> </li>
+      <li> <a href="./project.html">Projects</a></li>
+      <li><a href="./skill.html">Skills</a></li>
+    </nav>
+    <div id="skills">
+        <label for="html">HTML</label>
+        <progress id="html" value="82" max="100"> 82% </progress>
+        <label for="css">CSS</label>
+        <progress id="css" value="70" max="100">70%</progress>
+        <label for="js">Javascript</label>
+        <progress id="js" value="50" max="100">50%</progress>
+        <label for="c++">C++</label>
+        <progress id="c++" value="70" max="100">70%</progress>
+        <label for="kotlin">Kotlin</label>
+        <progress id="kotlin" value="40" max="100">40%</progress>
+        <label for="dsa">DSA</label>
+        <progress id="dsa" value="50" max="100">50%</progress>
+    </div>
+</body>
+</html>
