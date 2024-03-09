@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <link rel="stylesheet" href="./grade.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="animate-charcter">Grade Calculator</h2>
+        <div id="form">
+            <form action="">
+                <input type="number" id="DSA" placeholder="DSA" style="background-color: antiquewhite; border: none; border-radius: 3px; margin-bottom:4px ;"><br>
+                <!-- <input type="number" id="WEB D" placeholder="WEB D" style="background-color: antiquewhite; border: none; border-radius: 3px; margin-bottom:4px ;"><br> -->
+                <input type="number" id="DMS" placeholder="DMS" style="background-color: antiquewhite; border: none; border-radius: 3px; margin-bottom:4px ;"><br>
+                <input type="number" id="COA" placeholder="COA" style="background-color: antiquewhite; border: none; border-radius: 3px; margin-bottom:4px ;"><br>
+                <input type="number" id="PDC" placeholder="PDC" style="background-color: antiquewhite; border: none; border-radius: 3px; margin-bottom:4px ;"><br>
+                <!-- <input type="number" id="POM" placeholder="POM" style="background-color: antiquewhite; border: none; border-radius: 3px; margin-bottom:4px ;"><br> -->
+                <!-- <button type="submit" style="background-color: antiquewhite; border: none; border-radius: 3px; margin-bottom:4px ;" onclick="calculate()">Submit</button> -->
+                <input
+              type="button"
+              value="show Percentage"
+              class="form-button"
+              onclick="calculate()"
+            /> 
+            </form>
+            <div class="form-group showdata"> 
+                <p id="showdata"></p> 
+              </div>
+        </div>
+    </div>
+    <script src="./grade.js"></script>
+</body>
+</html>
