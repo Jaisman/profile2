@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Navigation Scroll Bar</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<style>
+	
+		/* styling article tag component */
+		article {
+			position: fixed;
+			margin-left: 10px;
+		}
+		
+		/* styling navlist */
+		#navlist {
+			background-color: black;
+			position: fixed;
+			left: 45%;
+			top: -60px;
+			width: auto;
+			display: block;
+			transition: top 0.3s;
+		}
+		
+		/* styling navlist anchor element */
+		#navlist a {
+			float: left;
+			display: block;
+			color: #f2f2f2;
+			text-align: center;
+			padding: 12px;
+			text-decoration: none;
+			font-size: 15px;
+		}
+		
+		/* hover effect of navlist anchor element */
+		#navlist a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+        body{
+            background-image:radial-gradient(#BDDB43,#DB2763);
+            background-repeat: no-repeat;
+            overflow: scroll;
+        }
+	</style>
+</head>
+
+<body>
+	
+	<!-- logo with tag -->
+	<article>
+		<h1 style="color: lightcoral;">
+			IIIT ALLAHABAD</h1>
+		
+		<b>An institute of National Importance</b>	
+<p>
+    Indian Institute of Information Technology Allahabad is one of the most prestigious institutes in India. IIIT Allahabad is ranked 89th in the Engineering category by NIRF 2023. IIIT Allahabad has been ranked by several other ranking bodies on international and national level. The QS World University Ranking has ranked IIIT Allahabad at 189th in the Southern Asia category. Additionally, IIT Allahabad is ranked 10th in the Engineering (government) category by India Today 2023.
+
+    Indian Institute of Information Technology, Allahabad (IIIT) was established in 1999 and was awarded the status of deemed university status by the Government of India in 2000. In 2014, the Ministry of Human Resource Development (MHRD) recognised IIIT Allahabad as an 'Institute of National Importance'. Indian Institute of Information Technology, Allahabad offers four programmes: BTech, MTech, MBA, and PhD across four departments, namely Applied Sciences, Electronics and Communication Engineering, Information Technology, and Management Sciences. IIIT Allahabad admissions are entrance-based. IIT Allahabad entrance exams are JEE Main, DASA, GATE, CAT, etc.
+    
+    IIIT Allahabad cutoff for BTech (IT) stood at 5924. During IIT Allahabad placements, a placement rate of 100% was recorded. IIIT Allahabad average package stood at INR 30.68 LPA (BTech). Indian Institute of Information Technology, Allahabad has good infrastructural facilities.
+		</p>
+
+	</article>
+	
+	<!-- Navbar items -->
+	<div id="navlist">
+		<a href="#">HOME</a>
+		<a href="#">SEARCH</a>
+		<a href="#">RESOURCES</a>
+		<!-- <a href="#">Careers</a> -->
+		<a href="#">CONTACT US</a>
+	</div>
+
+	<!-- for creating scroll -->
+	<div class="scrollable"
+		style="padding:15px 15px 4500px;">
+	</div>
+
+	<script>
+	
+		// When the user scrolls down then
+		// slide down the navbar
+		window.onscroll = function() {
+			scroll()
+		};
+
+		function scroll() {
+			if (document.body.scrollTop > 20 || 
+					document.documentElement.scrollTop > 20)
+			{
+				document.getElementById("navlist").style.top
+							= "0";
+			}
+			else {
+				document.getElementById("navlist").style.top
+							= "-60px";
+			}
+		}
+	</script>
+</body>
+
+</html>
