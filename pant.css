@@ -1,0 +1,33 @@
+h2{
+    margin-left: 40vw;
+}
+h4{
+    margin-left: 50vw;
+}
+img{
+    height: 80vh;
+    margin-left: 3vw;
+
+}
+#girid{
+    display: grid;
+    padding: 4vw;
+}
+#girid img{
+    grid-row: 1;
+    grid-column: 1;
+    margin-left: 16vw;
+}
+#girid p{
+    grid-row: 1;
+    grid-column: 2;
+    font-size: large;
+    width: 40vw;
+    font-size: 30px;
+}
+#diy{
+    background-color: gray;
+    width: fit-content;
+    padding: 3vh;
+    
+}

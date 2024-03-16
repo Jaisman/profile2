@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New post</title>
+    <link rel="stylesheet" href="./create.css">
+</head>
+<body>
+    <nav>
+        <li><button ><a href="./publish.html" style="color: white; text-decoration: none;">Publish</a></button></li>
+        <li><button id="set-button">Settings</button></li>
+    </nav>
+    <div id="feature">
+        <button id="bold"><b>B</b></button>
+        <button id="italic"><i>I</i></button>
+        <button style="text-decoration: underline;" id="underline">U</button>
+        <div class="container">
+            <div class="size-slider">
+                <input type="range" min="12" max="30" value="18">
+            </div>
+</div>
+</div>
+    <div id="new">
+        <form action="" id="blogForm" enctype="multipart/form-data">
+        <input id="file" type="file" placeholder="Add">
+    <div id="text">
+        <textarea name="text" class="content" cols="90" rows="80" placeholder="Write your text here"></textarea>
+    </div>
+</form>
+    <div id="setting">
+        <label for="visible">Visibility
+        <select name="visible" id="visible">
+            <option value="Public" selected>Public</option>
+            <option value="Private">Private</option>
+            <option value="Password protected">Password protected</option>
+        </select>
+    </label>
+        <label for="time">
+        <input type="checkbox" value="immideately">Publish Immidiately</label>
+        <label for="check">
+        <input type="checkbox" name="check" id="check">Stick to the top of the blog</label>
+        <label for="authtor">Author
+        <input type="text" id="author"></label>
+        <label for="timestamp">
+            Time Stamp: 
+            <input type="datetime">
+        </label>
+    </div>
+</div>
+<script>
+    let button = document.querySelector("#set-button");
+    let setting = document.querySelector("#setting");
+    button.addEventListener("click", fun);
+
+    function fun() {
+        setting.style.display = "flex";
+    }
+
+    let button2 = document.querySelector("#bold");
+    let button3 = document.querySelector("#italic");
+    let button4 = document.querySelector("#underline");
+    let text = document.querySelector("#text");
+
+    button2.addEventListener("click", fun2);
+    button3.addEventListener("click", fun3);
+    button4.addEventListener("click", fun4);
+
+    function fun2() {
+        let fontWeight = document.querySelector("#bold");
+        text.style.fontWeight = "bold";
+    }
+
+    function fun3() {
+        text.style.fontStyle = (text.style.fontStyle === "italic") ? "normal" : "italic";
+    }
+
+    function fun4() {
+        let textDecoration = document.querySelector("#underline");
+        text.style.textDecoration = "underline";
+    }
+    
+    const range = document.querySelector('input');
+    const content = document.querySelector('.content');
+    range.addEventListener('input', function(){
+        const rangeValue = range.value;
+        content.style.fontSize= rangeValue + "px";
+    })
+    document.getElementById("blogForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // Send form data to MongoDB (replace the URL with your MongoDB API endpoint)
+            fetch("mongodb://localhost:27017", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Failed to publish blog");
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log("Blog published successfully:", data);
+                // Optionally, redirect the user to a confirmation page
+                // window.location.href = "confirmation.html";
+            })
+            .catch(error => {
+                console.error("Error publishing blog:", error);
+                // Optionally, display an error message to the user
+                // alert("Failed to publish blog. Please try again later.");
+            });
+        });
+        let dt = document.querySelector('#timestamp');
+        dt = new Date();
+</script>
+
+</body>
+</html>
